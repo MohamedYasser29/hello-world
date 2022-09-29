@@ -39,7 +39,16 @@ jobs:
       - run:
           name: "hello"
           command: "echo World"
+          
+  printname:
 
+    docker:
+      - image: circleci/node:13.8.0
+
+    steps:
+      - checkout
+      - run:
+          command: "echo <<env_name>>"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
