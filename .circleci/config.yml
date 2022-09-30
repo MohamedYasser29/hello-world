@@ -38,9 +38,9 @@ jobs:
 
     steps:
       - checkout
-      - run: cat .output.txt
+      - run: cat ./output.txt
       - attach_workspace:
-          at: .
+          at: ./
 
 
   print_hello:
