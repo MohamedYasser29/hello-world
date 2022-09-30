@@ -37,10 +37,9 @@ jobs:
       - image: circleci/node:13.8.0
 
     steps:
-      - run:
-            command: cat ~/output.txt
-          - attach_workspace:
-            at: ~/
+      - run: cat ~/output.txt
+      - attach_workspace:
+          at: ~/
 
 
   print_hello:
