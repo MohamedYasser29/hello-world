@@ -52,6 +52,7 @@ jobs:
       - run:
           name: "hello"
           command: "echo Hello"
+      - print_pipeline_id
 
   print_world:
 
@@ -78,8 +79,10 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
+    
+      print_hello
       
-     - save_hello_world_output
-     - print_output_file:
-        requires: 
-          - save_hello_world_output
+#     - save_hello_world_output
+#     - print_output_file:
+#        requires: 
+#          - save_hello_world_output
