@@ -1,0 +1,12 @@
+version: 2.1
+
+commands:
+  print_pipeline_id:
+    Description: "commands exercise"
+    parameters: 
+      try:
+       type: string
+       default: "$CIRCLE_WORKFLOW_ID"
+    steps: 
+      - run: echo ${CIRCLE_WORKFLOW_ID}
+     
